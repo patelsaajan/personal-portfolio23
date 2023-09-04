@@ -11,10 +11,10 @@ const Card = ({ children, boxColor }: CardProps) => {
   const theme = useTheme();
   return (
     <Box
-      display={"flex"}
-      flexDirection={"column"}
-      textAlign={"center"}
-      justifyContent={"center"}
+      display="flex"
+      flexDirection="column"
+      textAlign="center"
+      justifyContent="center"
       sx={{
         width: "246px",
         height: "200px",

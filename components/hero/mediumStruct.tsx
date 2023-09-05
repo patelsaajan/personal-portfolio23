@@ -14,6 +14,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import DownloadIcon from "@mui/icons-material/Download";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import BasicInfo from "./bits/basicInfo";
 
 const MediumStruct = () => {
   const theme = useTheme();
@@ -25,42 +26,10 @@ const MediumStruct = () => {
           pl: 4,
           display: "flex",
           flexDirection: "column",
-          gap: 1,
         }}
       >
         <>
-          <Fab
-            variant="extended"
-            size="small"
-            sx={{
-              width: 130,
-              color: "text.secondary",
-              backgroundColor: "primary.light",
-              opacity: 1.5,
-              fontSize: 12,
-              fontWeight: 1000,
-              transition: "all 200ms ease-in-out",
-              boxShadow: 0,
-              "&:hover": {
-                backgroundColor: "primary.main",
-                transition: "all 200ms ease-in-out",
-                border: `2px solid ${theme.palette.primary.light}`,
-              },
-            }}
-          >
-            👋 Saudacoes!
-          </Fab>
-          <Typography variant="h3" sx={{ fontWeight: "Bold" }}>
-            Henrique Sousa
-          </Typography>
-          <Typography
-            variant="subtitle2"
-            fontWeight="medium"
-            color="rgba(255, 255, 255, 0.5)"
-          >
-            Front-end developer ~ UI designer
-          </Typography>
-
+          <BasicInfo />
           <Box
             sx={{
               display: "flex",

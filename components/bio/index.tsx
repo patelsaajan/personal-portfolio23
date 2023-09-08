@@ -21,7 +21,7 @@ const Bio = () => {
         flexDirection: { xs: "column", md: "row", minHeight: "80vh" },
         alignItems: isMobile ? "flex-start" : "center",
         justifyContent: "space-around",
-        gap: "80px",
+        // gap: "48px",
         pt: isMobile ? "0" : "60px",
       }}
     >

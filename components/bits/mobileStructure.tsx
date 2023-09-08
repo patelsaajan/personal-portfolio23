@@ -25,6 +25,7 @@ const MobileStructure = () => {
       <Box
         sx={{
           px: "40px",
+          py: "80px",
           display: "flex",
           flexDirection: "column",
           alignContent: "flex-start",

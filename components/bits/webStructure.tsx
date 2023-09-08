@@ -1,16 +1,19 @@
 import Image from "next/image";
 import React from "react";
 import CustomFab from "./customFab";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 import MutedText from "./mutedText";
 
 const WebStructure = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
+  const ratio = 3 / 5;
   return (
     <>
       <Box display={"flex"} px={"60px"}>
         <Image
-          width={350}
-          height={380}
+          width={isMobile ? 350 * ratio : 350}
+          height={isMobile ? 380 * ratio : 380}
           alt={"Real Picture"}
           src={"/imgs/ProfilePic.png"}
         />
@@ -19,13 +22,16 @@ const WebStructure = () => {
         display="flex"
         flexDirection={"column"}
         gap={4}
-        justifyContent={"center"}
-        alignContent={"center"}
-        pr="60px"
+        width={"600px"}
+        justifyContent={"flex-start"}
+        alignContent={"flex-start"}
+        // pr="60px"
       >
         <CustomFab sx={{ width: "170px" }}> 🤔 sobre mim</CustomFab>
         <Typography variant="h3" width="100%%">
-          Washington Heriique Fernandes de Sousa
+          {isMobile
+            ? "Washington Heriique"
+            : "Washington Heriique Fernandes de Sousa"}
         </Typography>
         <Box display={"flex"} flexDirection={"column"} gap="2">
           <Typography fontSize={16}>

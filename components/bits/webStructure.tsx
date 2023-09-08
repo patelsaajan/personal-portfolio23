@@ -21,9 +21,10 @@ const WebStructure = () => {
         gap={4}
         justifyContent={"center"}
         alignContent={"center"}
+        pr="60px"
       >
         <CustomFab sx={{ width: "170px" }}> 🤔 sobre mim</CustomFab>
-        <Typography variant="h3" width="75%">
+        <Typography variant="h3" width="100%%">
           Washington Heriique Fernandes de Sousa
         </Typography>
         <Box display={"flex"} flexDirection={"column"} gap="2">

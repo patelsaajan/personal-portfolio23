@@ -24,13 +24,13 @@ const MobileStructure = () => {
       </Box>
       <Box
         sx={{
-          //   pt: "50px",
           px: "40px",
           display: "flex",
           flexDirection: "column",
           alignContent: "flex-start",
           textAlign: "flex-start",
           gap: 4,
+          pr: "60px",
         }}
       >
         <CustomFab sx={{ width: "170px" }}>🤔 sobre mim</CustomFab>

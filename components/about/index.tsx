@@ -1,20 +1,26 @@
 "use client";
 
-import { Box, Container, Typography } from "@mui/material";
+import {
+  Box,
+  Container,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import React from "react";
 import Card from "./card";
 import ImBox from "./imBox";
-import { useTheme } from "@emotion/react";
 
 const About = () => {
   const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const widthBreakpoints = { xs: "110px", xl: "246px" };
   return (
     <Box
       sx={{
         borderBottom: "solid",
         borderTop: "solid",
-        borderWidth: "1px",
+        borderWidth: isMobile ? "0px" : "1px",
         borderColor: "primary.light",
       }}
     >

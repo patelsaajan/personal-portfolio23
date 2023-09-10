@@ -19,7 +19,13 @@ const WebsiteStructure = () => {
       }}
     >
       <CustomFab sx={{ width: "170px" }}>🔗 Portfolio</CustomFab>
-      <Box display={"flex"} justifyContent={"space-between"}>
+      <Box
+        display={"flex"}
+        alignItems={"baseline"}
+        justifyContent={"space-evenly"}
+        flexWrap={"wrap"}
+        gap={"20px"}
+      >
         <Typography variant="h3" color={"text.main"} fontWeight={800}>
           Trabalhos e projectos
         </Typography>
@@ -46,13 +52,19 @@ const WebsiteStructure = () => {
           </CustomFab>
         </Box>
       </Box>
-      <Box display={"flex"} gap={"30px"} flexWrap={"wrap"}>
-        {projectCards.map((projectCard) => (
+      <Box
+        display={"flex"}
+        gap={"30px"}
+        flexWrap={"wrap"}
+        justifyContent={"space-around"}
+      >
+        {projectCards.map((projectCard, index) => (
           <Card
             title={projectCard.title}
             description={projectCard.discription}
             tags={projectCard.tags}
             src={projectCard.img}
+            indexColor={index}
           />
         ))}
       </Box>

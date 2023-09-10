@@ -9,9 +9,10 @@ type CardProps = {
   description: string;
   tags: string[];
   src: string;
+  indexColor: number;
 };
 
-const Card = ({ title, description, tags, src }: CardProps) => {
+const Card = ({ title, description, tags, src, indexColor }: CardProps) => {
   const theme = useTheme();
   return (
     <Box
@@ -24,6 +25,7 @@ const Card = ({ title, description, tags, src }: CardProps) => {
         width: "360px",
         height: "460px",
         padding: "30px",
+        backgroundColor: indexColor % 2 == 0 ? "primary.main" : "primary.light",
       }}
     >
       <Box>

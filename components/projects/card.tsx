@@ -5,13 +5,13 @@ import StyledButton from "../bits/tags";
 import Image from "next/image";
 
 type CardProps = {
-  name: string;
+  title: string;
   description: string;
-  tags: boolean[];
+  tags: string[];
   src: string;
 };
 
-const Card = ({ name, description, tags, src }: CardProps) => {
+const Card = ({ title, description, tags, src }: CardProps) => {
   const theme = useTheme();
   return (
     <Box
@@ -28,14 +28,14 @@ const Card = ({ name, description, tags, src }: CardProps) => {
     >
       <Box>
         <Typography color={"text.primary"} variant="h6">
-          {name}
+          {title}
         </Typography>
         <MutedText>{description}</MutedText>
       </Box>
       <Box display={"flex"} gap={"20px"}>
-        {tags[0] ? <StyledButton styleType="online" /> : <></>}
-        {tags[1] ? <StyledButton styleType="react" /> : <></>}
-        {tags[2] ? <StyledButton styleType="typescirpt" /> : <></>}
+        {tags.map((tag) => (
+          <StyledButton styleType={tag} />
+        ))}
       </Box>
       <Image
         src={src}

@@ -7,15 +7,29 @@ import Card from "./card";
 
 const WebsiteStructure = () => {
   const theme = useTheme();
-  const [projectCards, setProjectCards] = useState([
+  const projectCards = [
     {
       title: "Move.it",
       discription:
         "Aplicação da NLW#04 da Rocketseat. Desenvolvida com React. Plataforma de Pomodoro com exercícios.",
-      tags: [true, true, false],
+      tags: ["Online", "TypeScript"],
       img: "/imgs/cardImage.png",
     },
-  ]);
+    {
+      title: "Move.it",
+      discription:
+        "Aplicação da NLW#04 da Rocketseat. Desenvolvida com React. Plataforma de Pomodoro com exercícios.",
+      tags: ["React JS", "TypeScript"],
+      img: "/imgs/cardImage.png",
+    },
+    {
+      title: "Move.it",
+      discription:
+        "Aplicação da NLW#04 da Rocketseat. Desenvolvida com React. Plataforma de Pomodoro com exercícios.",
+      tags: ["React JS", "TypeScript"],
+      img: "/imgs/cardImage.png",
+    },
+  ];
   return (
     <Box
       sx={{
@@ -30,28 +44,38 @@ const WebsiteStructure = () => {
           Trabalhos e projectos
         </Typography>
 
-        <Box
-          display={"flex"}
-          border={`1px solid ${theme.palette.primary.light}`}
-          borderRadius={"16px"}
-          //   padding={"10px"}
-          height={"50px"}
-          width={"100px"}
-          alignContent={"center"}
-          justifyContent={"center"}
-          textAlign={"center"}
-        >
-          UI Design
+        <Box display={"flex"} gap={"20px"}>
+          <CustomFab
+            sx={{
+              width: "120px",
+              border: `1px solid ${theme.palette.primary.light}`,
+              backgroundColor: "primary.main",
+            }}
+          >
+            UI Design
+          </CustomFab>
+          <CustomFab sx={{ width: "120px" }}>Design</CustomFab>
+          <CustomFab
+            sx={{
+              width: "120px",
+              backgroundColor: "primary.main",
+              border: `1px solid ${theme.palette.primary.light}`,
+            }}
+          >
+            UI Design
+          </CustomFab>
         </Box>
       </Box>
-      <Card
-        name={"Move.it"}
-        description={
-          "  Aplicação da NLW#04 da Rocketseat. Desenvolvida com React. Plataforma de Pomodoro com exercícios."
-        }
-        tags={[true, true, false]}
-        src={"/imgs/cardImage.png"}
-      />
+      <Box display={"flex"} gap={"30px"}>
+        {projectCards.map((projectCard) => (
+          <Card
+            title={projectCard.title}
+            description={projectCard.discription}
+            tags={projectCard.tags}
+            src={projectCard.img}
+          />
+        ))}
+      </Box>
     </Box>
   );
 };

@@ -5,7 +5,7 @@ type CardProps = {
 };
 
 const StyledButton = ({ styleType }: CardProps) => {
-  if (styleType === "online")
+  if (styleType === "Online")
     return (
       <Button
         disableRipple
@@ -16,10 +16,10 @@ const StyledButton = ({ styleType }: CardProps) => {
           "&:hover": { backgroundColor: "rgba(74, 226, 144 ,0.3)" },
         }}
       >
-        online
+        Online
       </Button>
     );
-  else if (styleType === "typescirpt")
+  else
     return (
       <Button
         disableRipple
@@ -30,23 +30,8 @@ const StyledButton = ({ styleType }: CardProps) => {
           "&:hover": { backgroundColor: "primary.light" },
         }}
       >
-        Typescript
+        {styleType}
       </Button>
     );
-  else if (styleType === "react")
-    return (
-      <Button
-        disableRipple
-        sx={{
-          backgroundColor: "primary.light",
-          color: "text.secondary",
-          width: "100px",
-          "&:hover": { backgroundColor: "primary.light" },
-        }}
-      >
-        React JS
-      </Button>
-    );
-  else return <></>;
 };
 export default StyledButton;

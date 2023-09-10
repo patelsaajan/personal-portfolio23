@@ -8,8 +8,8 @@ import {
   useTheme,
 } from "@mui/material";
 import React from "react";
-import WebStructure from "../bits/webStructure";
-import MobileStructure from "../bits/mobileStructure";
+import WebStructure from "./webStructure";
+import MobileStructure from "./mobileStructure";
 
 const Bio = () => {
   const theme = useTheme();

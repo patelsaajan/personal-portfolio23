@@ -1,8 +1,8 @@
 import Image from "next/image";
 import React from "react";
-import CustomFab from "./customFab";
+import CustomFab from "../bits/customFab";
 import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
-import MutedText from "./mutedText";
+import MutedText from "../bits/mutedText";
 
 const WebStructure = () => {
   const theme = useTheme();

@@ -35,8 +35,8 @@ const Card = ({ title, description, tags, src, indexColor }: CardProps) => {
         <MutedText>{description}</MutedText>
       </Box>
       <Box display={"flex"} gap={"20px"}>
-        {tags.map((tag) => (
-          <StyledButton styleType={tag} />
+        {tags.map((tag, key) => (
+          <StyledButton key={key} styleType={tag} />
         ))}
       </Box>
       <Image

@@ -65,6 +65,7 @@ const WebsiteStructure = () => {
             tags={projectCard.tags}
             src={projectCard.img}
             indexColor={index}
+            key={index}
           />
         ))}
       </Box>

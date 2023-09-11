@@ -15,6 +15,7 @@ const WebStructure = () => {
           width={isMobile ? 350 * ratio : 350}
           height={isMobile ? 380 * ratio : 380}
           alt={"Real Picture"}
+          // src={"/imgs/ProfilePic.png"}
           src={"/imgs/ProfilePic.png"}
         />
       </Box>

@@ -10,7 +10,8 @@ const Projects = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <Container sx={{ py: "150px" }}>
-      {isMobile ? <MobileStrucutre /> : <WebsiteStructure />}
+      <MobileStrucutre />
+      {/* {isMobile ? <MobileStrucutre /> : <WebsiteStructure />} */}
     </Container>
   );
 };

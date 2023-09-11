@@ -25,7 +25,7 @@ const Card = ({ title, description, tags, src, indexColor }: CardProps) => {
         width: "360px",
         height: "460px",
         padding: "30px",
-        backgroundColor: indexColor % 2 == 0 ? "primary.main" : "primary.light",
+        backgroundColor: !(indexColor % 2) ? "primary.main" : "primary.light",
       }}
     >
       <Box>

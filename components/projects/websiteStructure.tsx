@@ -56,7 +56,7 @@ const WebsiteStructure = () => {
         display={"flex"}
         gap={"30px"}
         flexWrap={"wrap"}
-        justifyContent={"space-around"}
+        justifyContent={"space-evenly"}
       >
         {projectCards.map((projectCard, index) => (
           <Card

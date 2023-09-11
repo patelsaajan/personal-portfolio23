@@ -25,6 +25,7 @@ const Card = ({ title, description, tags, src, indexColor }: CardProps) => {
         width: "360px",
         height: "460px",
         padding: "30px",
+        mx: { xs: "30px", md: 0 },
         backgroundColor: !(indexColor % 2) ? "primary.main" : "primary.light",
       }}
     >

@@ -6,6 +6,8 @@ import { projectCards } from "./projectsConstants";
 import Card from "./card";
 import { Box, useTheme } from "@mui/material";
 
+import styles from "./carousel.module.css";
+
 const MobileStrucutre = () => {
   const theme = useTheme();
   const [width, setWidth] = useState<number>(0);
@@ -27,31 +29,29 @@ const MobileStrucutre = () => {
           justifyContent: "center",
           alignContent: "center",
           border: `2px solid ${theme.palette.primary.light}`,
-          width: "550px",
-          padding: "auto",
-          borderRadius: "16px",
+          width: "100vw",
+          py: 5,
         }}
       >
         <motion.div
           ref={carousel1}
-          className="carousel1"
+          className={styles.carousel1}
           whileTap={{ cursor: "grabbing" }}
         >
           <motion.div
             drag="x"
             dragConstraints={{ right: 0, left: -width }}
-            className="inner-carousel1"
+            className={styles.innerCarousel1}
           >
             {projectCards.map((projectCard, index) => (
-              <Box className="items" key={index}>
-                <Card
-                  title={projectCard.title}
-                  description={projectCard.discription}
-                  tags={projectCard.tags}
-                  src={projectCard.img}
-                  indexColor={index}
-                />
-              </Box>
+              <Card
+                title={projectCard.title}
+                description={projectCard.discription}
+                tags={projectCard.tags}
+                src={projectCard.img}
+                indexColor={index}
+                key={index}
+              />
             ))}
           </motion.div>
         </motion.div>

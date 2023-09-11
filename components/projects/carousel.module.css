@@ -1,0 +1,14 @@
+.items {
+  padding: 30px;
+}
+
+.innerCarousel1 {
+  display: flex;
+}
+
+.carousel1 {
+  display: flex;
+  width: 100%;
+  cursor: grab;
+  overflow: hidden;
+}

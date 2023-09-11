@@ -21,39 +21,6 @@ const WebsiteStructure = () => {
       <CustomFab sx={{ width: "170px" }}>🔗 Portfolio</CustomFab>
       <Box
         display={"flex"}
-        alignItems={"baseline"}
-        justifyContent={"space-evenly"}
-        flexWrap={"wrap"}
-        gap={"20px"}
-      >
-        <Typography variant="h3" color={"text.main"} fontWeight={800}>
-          Trabalhos e projectos
-        </Typography>
-
-        <Box display={"flex"} justifyContent={"space-around"} gap={"20px"}>
-          <CustomFab
-            sx={{
-              width: "120px",
-              border: `1px solid ${theme.palette.primary.light}`,
-              backgroundColor: "primary.main",
-            }}
-          >
-            UI Design
-          </CustomFab>
-          <CustomFab sx={{ width: "120px" }}>Design</CustomFab>
-          <CustomFab
-            sx={{
-              width: "120px",
-              backgroundColor: "primary.main",
-              border: `1px solid ${theme.palette.primary.light}`,
-            }}
-          >
-            UI Design
-          </CustomFab>
-        </Box>
-      </Box>
-      <Box
-        display={"flex"}
         gap={"30px"}
         flexWrap={"wrap"}
         justifyContent={"space-evenly"}

@@ -5,6 +5,7 @@ import CustomFab from "../bits/customFab";
 import MutedText from "../bits/mutedText";
 import { motion } from "framer-motion";
 import DetailedCard from "../bits/detailedCard";
+import cardDetails from "./cardDetails";
 
 const PopoutCards = () => {
   const theme = useTheme();
@@ -55,9 +56,21 @@ const PopoutCards = () => {
           <MutedText> 2016 ~ Atualmente</MutedText>
         </Box>
       </Box>
-      <Box display="flex" justifyContent="space-around" pt={"40px"}>
-        <DetailedCard></DetailedCard>
-        <DetailedCard></DetailedCard>
+      <Box
+        display="flex"
+        flexWrap="wrap"
+        justifyContent="space-around"
+        pt={"40px"}
+        gap={"30px"}
+      >
+        {cardDetails.map((card) => (
+          <DetailedCard
+            title={card.title}
+            description={card.description}
+            leftBox={card.leftbox}
+            date={card.date}
+          />
+        ))}
       </Box>
     </>
   );

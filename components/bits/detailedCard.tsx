@@ -2,7 +2,14 @@ import { Box, Typography, useTheme } from "@mui/material";
 import React from "react";
 import MutedText from "./mutedText";
 
-const DetailedCard = () => {
+type cardProps = {
+  title: string;
+  description: string;
+  leftBox: string;
+  date: string;
+};
+
+const DetailedCard = ({ title, description, leftBox, date }: cardProps) => {
   const theme = useTheme();
   return (
     <Box
@@ -17,19 +24,17 @@ const DetailedCard = () => {
       }}
     >
       <Typography variant="subtitle1" fontWeight={"1000"}>
-        Title
+        {title}
       </Typography>
       <Box sx={{ width: "520px", height: "78.5px" }}>
-        <MutedText>
-          this is where the extra text goes talking about stuff
-        </MutedText>
+        <MutedText>{description}</MutedText>
       </Box>
       <Box display={"flex"} justifyContent={"space-between"}>
         <Typography fontWeight={"800"} variant="body2" color="text.secondary">
-          hello
+          {leftBox}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
-          first
+        <Typography fontWeight={"800"} variant="body2" color="text.secondary">
+          {date}
         </Typography>
       </Box>
     </Box>

@@ -19,7 +19,6 @@ const MobileStrucutre = () => {
       (carousel1.current?.scrollWidth as number) -
         (carousel1.current?.offsetWidth as number)
     );
-    // setWidth(2000);
   }, []);
   return (
     <Box display={"flex"} justifyContent={"center"}>
@@ -28,9 +27,8 @@ const MobileStrucutre = () => {
           display: "flex",
           justifyContent: "center",
           alignContent: "center",
-          border: `2px solid ${theme.palette.primary.light}`,
+          // border: `2px solid ${theme.palette.primary.light}`,
           width: "100vw",
-          py: 5,
         }}
       >
         <motion.div

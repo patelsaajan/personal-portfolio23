@@ -23,6 +23,7 @@ const Projects = () => {
         justifyContent={"space-evenly"}
         flexWrap={"wrap"}
         gap={"20px"}
+        mt={"20px"}
       >
         <Typography variant="h3" color={"text.main"} fontWeight={800}>
           Trabalhos e projectos

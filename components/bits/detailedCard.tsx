@@ -19,8 +19,13 @@ const DetailedCard = ({ title, description, leftBox, date }: cardProps) => {
         height: "220px",
         border: `2px solid ${theme.palette.primary.light}`,
         borderRadius: "16px",
-
-        "&:hover": { backgroundColor: "primary.light", border: "none" },
+        // transition: "all 200ms ease-in-out",
+        "&:hover": {
+          backgroundColor: "primary.light",
+          border: "none",
+          //   transform: "scale(1.02)",
+          //   cursor: "pointer",
+        },
       }}
     >
       <Typography variant="subtitle1" fontWeight={"1000"}>

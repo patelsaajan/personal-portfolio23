@@ -27,7 +27,7 @@ const MobileStrucutre = () => {
           display: "flex",
           justifyContent: "center",
           alignContent: "center",
-          // border: `2px solid ${theme.palette.primary.light}`,
+
           width: "100vw",
         }}
       >
